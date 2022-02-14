@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EmilyRoseCotter/music-library/issues"
   },
-  "homepage": "https://github.com/EmilyRoseCotter/music-library#readme"
+  "homepage": "https://github.com/EmilyRoseCotter/music-library#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
