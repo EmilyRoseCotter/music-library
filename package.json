@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/EmilyRoseCotter/music-library#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
