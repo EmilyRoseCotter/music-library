@@ -4,6 +4,8 @@
   "description": "Project music library implementing API which can perform CRUD operations on a database.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/EmilyRoseCotter/music-library#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
