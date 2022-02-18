@@ -4,8 +4,11 @@
   "description": "Project music library implementing API which can perform CRUD operations on a database.",
   "main": "index.js",
   "scripts": {
+    "prestart": "node utils/create-database.js",
     "start": "nodemon -r dotenv/config index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "node utils/create-database.js test",
+    "test": "mocha tests/**/*.js --exit --recursive --timeout 60000 --file ./tests/test-setup.js",
+    "posttest": "node utils/drop-database.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,10 @@
     "mysql2": "^2.3.3"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
     "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "mocha": "^9.2.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
