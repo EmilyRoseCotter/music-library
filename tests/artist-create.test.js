@@ -17,18 +17,18 @@ describe('create artist', () => {
     describe('POST', () => {
       it('creates a new artist in the database', async () => {
         const res = await request(app).post('/artist').send({
-          name: 'Tame Impala',
-          genre: 'rock',
+          name: 'Taylor Swift',
+          genre: 'pop/country',
       });
 
       expect(res.status).to.equal(201);
 
         const [[artistEntries]] = await db.query(
-          `SELECT * FROM Artist WHERE name = 'Tame Impala'`
+          `SELECT * FROM Artist WHERE name = 'Taylor Swift'`
         );
 
-      expect(artistEntries.name).to.equal('Tame Impala');
-      expect(artistEntries.genre).to.equal('rock');
+      expect(artistEntries.name).to.equal('Taylor Swift');
+      expect(artistEntries.genre).to.equal('pop/country');
       });
     });
   });

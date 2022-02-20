@@ -11,8 +11,8 @@ describe('read artist', () => {
     db = await getDb();
     await Promise.all([
       db.query('INSERT INTO Artist (name, genre) VALUES(?, ?)', [
-        'Tame Impala',
-        'rock',
+        'Taylor Swift',
+        'pop/country',
       ]),
       db.query('INSERT INTO Artist (name, genre) VALUES(?, ?)', [
         'Kylie Minogue',
